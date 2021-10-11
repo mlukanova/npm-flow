@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [ 16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     permissions: 
       contents: read
@@ -24,8 +24,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm install
+      - run: yarn install
       # Publish to npm
-      - run: npm publish --access public
+      - run: yarn publish --access public --new-version (yarn get-version)
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
