@@ -1,6 +1,6 @@
 {
   "name": "@mlukanova/cudosjs",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "author": "",
   "description": "JavaScript SDK for Cudos Network",
   "license": "ISC",
@@ -28,9 +28,9 @@
   ],
   "dependencies": {
     "@cosmjs/cosmwasm-stargate": "0.26.0",
+    "@cosmjs/crypto": "0.26.0",
     "@cosmjs/proto-signing": "0.26.0",
     "@cosmjs/stargate": "0.26.0",
-    "@cosmjs/crypto": "0.26.0",
     "@cosmjs/tendermint-rpc": "0.26.0"
   },
   "devDependencies": {
